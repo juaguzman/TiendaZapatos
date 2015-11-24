@@ -15,8 +15,8 @@ switch ($_REQUEST['req_zap'])
     
     case 'Eliminar':
         $id = $_REQUEST['id'];
-        
-        header('Location:');
+        $mensaje = Zapatos::eliminar_zapatos($id);
+        header('Location:../index.php');
         break;
     
     case "Modificar":

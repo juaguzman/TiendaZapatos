@@ -73,4 +73,34 @@ class Zapatos
          
     }
     
+    static function eliminar_zapatos($id)
+    {
+        include '../conex.php';
+        $mensaje = "resultados:";
+        //Insertar usuario en la BD  
+       
+        $sql = @mysql_query("DELETE FROM zapatos WHERE idzapatos=$id");
+        if (!$sql) {
+            $mensaje.="Error Eliminando los zapatos en la base de datos: " . mysql_error();
+        } else {
+            $mensaje.="Los zapatos con identificacion " . $id . " fueron eliminados del sistema";
+            
+        }
+        
+        return $mensaje;
+    }
+    
+    static function editarZapatos($marca, $modelo, $cantidad, $valo, $sucursal_idsucursal)
+    {
+        if($marca!=NULL || $modelo!=NULL || $cantidad!=NULL || $valo!=NULL || $sucursal_idsucursal!= NULL )
+        {
+            $sql = "UPDATE zapatos SET marca='$marca',modelo='$modelo',cantidad=$cantidad ,valor=$valo,sucursal_idsucursal=$sucursal_idsucursal;";
+            mysql_query($sql);
+            header('Location:');
+        }
+        else
+        {
+            echo "Los campos deben estar completamente llenos";
+        }
+    }
 }
