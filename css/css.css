@@ -3,6 +3,7 @@ body
     background:white;
 }
 /*-------menu vertical-------------*/
+
 #nav1 nav{
     /*Bordes redondeados*/
     -webkit-border-radius:10px;/*Para chrome y Safari*/
@@ -16,8 +17,9 @@ body
     background-image: linear-gradient(top, #FFF, #81F781);/*El estandar por defecto*/
     overflow:hidden;
     padding:10px;
-    width:18%;
+    width:29%;
     float: right;
+    height: 100%
     
 }
 

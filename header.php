@@ -9,6 +9,8 @@
                 <li class="menu1"> <a href="#">Cali</a></li>
                 <li class="menu1"> <a href="#">Bogota</a></li>
                 <li class="menu1"> <a href="#">Pasto</a></li> 
+                <li class="menu1"> <a href="#">General</a></li> 
+                
             </ul>
         </nav>
     </div>
