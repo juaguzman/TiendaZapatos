@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -7,11 +8,12 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
+        <link type="text/css" rel="stylesheet" href="css/css.css">
         <title></title>
     </head>
     <body>
-        <?php
-        // put your code here
-        ?>
+        
+        <?php include ("./header.php"); ?>
+        
     </body>
 </html>
