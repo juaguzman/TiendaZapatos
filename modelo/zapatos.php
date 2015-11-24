@@ -36,7 +36,7 @@ class Zapatos
     
     public function lista_zapatos()
     {
-        include './conexi.php';
+        include '../conexi.php';
         $mysql = new conexion();
         $mysqli=$mysql->conctar();
         $consulta= "SELECT idzapatos, marca,modelo,cantidad,valor,sucursal_idsucursal, sucursal.nombre as 'sucursal' from zapatos, sucursal where sucursal_idsucursal = sucursal.idsucursal;";

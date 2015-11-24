@@ -10,12 +10,12 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <link type="text/css" rel="stylesheet" href="css/css.css">
-        <link type="text/css" rel="stylesheet" href="css/cssGen.css">
+        <link type="text/css" rel="stylesheet" href="../css/css.css">
+        <link type="text/css" rel="stylesheet" href="../css/cssGen.css">
         <title></title>
     </head>
     <body>
-        <?php include ("./header.php"); ?>
+        <?php include ("../pasto/headerP.php"); ?>
         
         <div>
             
@@ -36,7 +36,7 @@ and open the template in the editor.
                 <div class="tabla">
           <?php include './conex.php';
             include './modelo/zapatos.php';
-            Zapatos::lista_zapatos()?>
+            Zapatos::lista_zapatos_sucursal(1)?>
                     </div>
         </div>
         

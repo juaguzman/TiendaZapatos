@@ -10,20 +10,20 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <link type="text/css" rel="stylesheet" href="css/css.css">
-        <link type="text/css" rel="stylesheet" href="css/cssGen.css">
+        <link type="text/css" rel="stylesheet" href="../css/css.css">
+        <link type="text/css" rel="stylesheet" href="../css/cssGen.css">
         <title></title>
     </head>
     <body>
-        <?php include ("./header.php"); ?>
+        <?php include ("cali/headerC.php"); ?>
         
         <div>
             
              <div id="menu">
             <nav>
                 <ul>
-                    <li ><a href="index.php"><img src="img/casa.png" width="25" height="25"></a></li>
-                    <li> <a href="#">Zapatos</a></li>
+                    <li ><a href="../index.php"><img src="../img/casa.png" width="25" height="25"></a></li>
+                    <li> <a href="../cali/vistaCali.php">Zapatos</a></li>
                     <li> <a href="#">Vendendor</a></li>
                     <li> <a href="#">Venta</a></li>                    
                 </ul>
@@ -33,15 +33,10 @@ and open the template in the editor.
         
         
             <div id="content" class="center_content">
-                <div class="tabla">
-          <?php include './conex.php';
-            include './modelo/zapatos.php';
-            Zapatos::lista_zapatos_sucursal(1)?>
-                    </div>
+                <img  src="../img/1cali.jpg" onmouseover="this.src='../img/2cali.jpg';" onmouseout="this.src='../img/1cali.jpg';" width="1090px" height="990px"/>
         </div>
         
        
             </div>
     </body>
 </html>
-

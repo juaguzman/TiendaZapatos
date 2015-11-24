@@ -15,7 +15,7 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-        <?php include ("./header.php"); ?>
+        <?php include ("../cali/caliIndex.php"); ?>
         
         <div>
             
@@ -23,7 +23,7 @@ and open the template in the editor.
             <nav>
                 <ul>
                     <li ><a href="index.php"><img src="img/casa.png" width="25" height="25"></a></li>
-                    <li> <a href="vistaPasto.php">Zapatos</a></li>
+                    <li> <a href="#">Zapatos</a></li>
                     <li> <a href="#">Vendendor</a></li>
                     <li> <a href="#">Venta</a></li>                    
                 </ul>
@@ -33,10 +33,15 @@ and open the template in the editor.
         
         
             <div id="content" class="center_content">
-                <img  src="img/1pasto.jpg" onmouseover="this.src='img/2pasto.jpg';" onmouseout="this.src='img/1pasto.jpg';" width="1090px" height="990px"/>
+                <div class="tabla">
+          <?php include '../conex.php';
+            include '../modelo/zapatos.php';
+            Zapatos::lista_zapatos()?>
+                    </div>
         </div>
         
        
             </div>
     </body>
 </html>
+
