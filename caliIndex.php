@@ -23,7 +23,7 @@ and open the template in the editor.
             <nav>
                 <ul>
                     <li ><a href="index.php"><img src="img/casa.png" width="25" height="25"></a></li>
-                    <li> <a href="vistaPasto.php">Zapatos</a></li>
+                    <li> <a href="vistaCali.php">Zapatos</a></li>
                     <li> <a href="#">Vendendor</a></li>
                     <li> <a href="#">Venta</a></li>                    
                 </ul>
@@ -33,7 +33,7 @@ and open the template in the editor.
         
         
             <div id="content" class="center_content">
-                <img  src="img/1pasto.jpg" onmouseover="this.src='img/2pasto.jpg';" onmouseout="this.src='img/1pasto.jpg';" width="1090px" height="990px"/>
+                <img  src="img/1cali.jpg" onmouseover="this.src='img/2cali.jpg';" onmouseout="this.src='img/1cali.jpg';" width="1090px" height="990px"/>
         </div>
         
        
