@@ -57,7 +57,7 @@ class Vendedor
     
      public function lista_vendedores_sucursal($sucursal)
     {
-       include './conexi.php';
+       include '../conexi.php';
         $mysql = new conexion(); 
         $mysqli=$mysql->conctar();
         $consulta= "select * from vendedor where vendedor.sucursal_idsucursal =$sucursal";

@@ -25,7 +25,7 @@ and open the template in the editor.
                     <li ><a href="index.php"><img src="../img/casa.png" width="25" height="25"></a></li>
                     <li> <a href="vistaPasto.php">Zapatos</a></li>
                     <li> <a href="vendedorP.php">Vendendor</a></li>
-                    <li> <a href="#">Venta</a></li>                    
+                    <li> <a href="ventasP.php">Venta</a></li>                    
                 </ul>
 
             </nav>
@@ -36,7 +36,7 @@ and open the template in the editor.
                 <div class="tabla">
           <?php include '../conex.php';
             include '../modelo/vendedor.php';
-            Vendedor::lista_vendedores()?>
+            Vendedor::lista_vendedores_sucursal(1)?>
                     </div>
         </div>
         </div>

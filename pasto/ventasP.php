@@ -15,17 +15,17 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-        <?php include ("../bogota/headerB.php"); ?>
+        <?php include ("../pasto/headerP.php"); ?>
         
         <div>
             
              <div id="menu">
             <nav>
                 <ul>
-                    <li ><a href="../index.php"><img src="../img/casa.png" width="25" height="25"></a></li>
-                    <li> <a href="vistaBogota.php">Zapatos</a></li>
-                    <li> <a href="vendedorB.php">Vendendor</a></li>
-                    <li> <a href="ventasB.php">Venta</a></li>                    
+                    <li ><a href="index.php"><img src="../img/casa.png" width="25" height="25"></a></li>
+                    <li> <a href="vistaPasto.php">Zapatos</a></li>
+                    <li> <a href="vendedorP.php">Vendendor</a></li>
+                    <li> <a href="#">Venta</a></li>                    
                 </ul>
 
             </nav>
@@ -36,7 +36,7 @@ and open the template in the editor.
                 <div class="tabla">
           <?php include '../conex.php';
             include '../modelo/vendedor.php';
-            Vendedor::lista_vendedores_sucursal(3)?>
+            Vendedor::lista_vendedores_sucursal(1)?>
                     </div>
         </div>
         </div>
