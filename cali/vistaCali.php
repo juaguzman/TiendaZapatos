@@ -15,7 +15,7 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-        <?php include ("../cali/caliIndex.php"); ?>
+        <?php include ("./headerC.php"); ?>
         
         <div>
             
