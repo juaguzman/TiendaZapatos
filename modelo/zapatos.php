@@ -56,14 +56,14 @@ class Zapatos
     
      public function lista_zapatos_sucursal($sucursal)
     {
-        include './conexi.php';
-        $mysql = new conexioni();
+         include './conexi.php';
+        $mysql = new conexion();
         $mysqli=$mysql->conctar();
         $consulta= "select * from zapatos where zapatos.sucursal_idsucursal = $sucursal";
         $result   = $mysqli->query($consulta);
          echo "<table border = '3' id=res > \n";
          echo "<tr align =center> <th colspan=5>Lista de Zapatos global</th> </tr>";
-         echo "<tr align=center id=tit><td >&nbsp;ID_Zapatos&nbsp;</td><td>&nbsp;MARCA&nbsp;</td><td>&nbsp;MODELO&nbsp;</td><td>&nbsp;VALOR&nbsp;</td><td>&nbsp;OPCIONES&nbsp;</td></tr> \n";
+         echo "<tr align=center id=tit><td >&nbsp;ID_Zapatos&nbsp;</td><td>&nbsp;MARCA&nbsp;</td><td>&nbsp;MODELO&nbsp;</td><td>&nbsp;CANTIDAD&nbsp;</td><td>&nbsp;VALOR&nbsp;</td><td>&nbsp;OPCIONES&nbsp;</td></tr> \n";
          while ($campo=mysqli_fetch_object($result)) 
                 {
              echo "<tr id=resul><td>$campo->idzapatos</td><td>$campo->marca</td><td>$campo->modelo</td><td>$campo->cantidad</td><td>$campo->valor</td></tr> \n";
