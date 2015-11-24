@@ -90,11 +90,11 @@ class Zapatos
         return $mensaje;
     }
     
-    static function editarZapatos($marca, $modelo, $cantidad, $valo, $sucursal_idsucursal)
+    static function editarZapatos($id,$marca, $modelo, $cantidad, $valo, $sucursal_idsucursal)
     {
-        if($marca!=NULL || $modelo!=NULL || $cantidad!=NULL || $valo!=NULL || $sucursal_idsucursal!= NULL )
+        if($id!=NULL || $marca!=NULL || $modelo!=NULL || $cantidad!=NULL || $valo!=NULL || $sucursal_idsucursal!= NULL )
         {
-            $sql = "UPDATE zapatos SET marca='$marca',modelo='$modelo',cantidad=$cantidad ,valor=$valo,sucursal_idsucursal=$sucursal_idsucursal;";
+            $sql = "UPDATE zapatos SET marca='$marca',modelo='$modelo',cantidad=$cantidad ,valor=$valo,sucursal_idsucursal=$sucursal_idsucursal WHERE idsucursal = $id;";
             mysql_query($sql);
             header('Location:../index.php');
         }

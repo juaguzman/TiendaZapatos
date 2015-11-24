@@ -19,7 +19,7 @@ class Vendedor
     }
     
     
-      static function insertarZapatos($cedula,$nombres,$apellidos,$fecha_nacimiento,$sucursal_idsucursal)
+      static function insertarvendedor($cedula,$nombres,$apellidos,$fecha_nacimiento,$sucursal_idsucursal)
     {
         include './conex.php';
         $mensaje = "Resultados";
@@ -71,6 +71,36 @@ class Vendedor
                 }
                  echo "</table> \n";
                  $mysqli->close();
+    }
+    
+    static function elminiar_vendedor($id)
+    {
+        include '../conex.php';
+        $mensaje = "resultados:";
+        
+        $sql = @mysql_query("DELETE FROM vendedor WHERE cedula =$id");
+        if (!$sql) {
+            $mensaje.="Error Eliminando al vendedor en la base de datos: " . mysql_error();
+        } else {
+            $mensaje.="el vendedor con identificacion " . $id . " fue eliminados del sistema";
+            
+        }
+        
+        return $mensaje;
+    }
+    
+    static function editarZapatos($id ,$nombres,$apellidos,$fecha_nacimiento,$sucursal_idsucursal)
+    {
+      if( $id!=NULL || $nombres!=NULL || $apellidos!=NULL || $fecha_nacimiento!=NULL || $sucursal_idsucursal!=NULL)
+      {
+        $sql = "UPDATE vendedor SET nombres='$nombre',apellidos='$apellidos',fecha_nacimiento='$fecha',sucursal_idsucursal=2 WhERE cedula =$id";  
+        mysql_query($sql);
+       header('Location:../index.php');
+      }
+       else
+        {
+            echo "Los campos deben estar completamente llenos";
+        }
     }
     
     
