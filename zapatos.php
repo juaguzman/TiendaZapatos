@@ -37,13 +37,13 @@ class Zapatos
     public function lista_zapatos()
     {
         include './conexi.php';
-        $mysql = new conexioni();
+        $mysql = new conexion();
         $mysqli=$mysql->conctar();
         $consulta= "SELECT idzapatos, marca,modelo,cantidad,valor,sucursal_idsucursal, sucursal.nombre as 'sucursal' from zapatos, sucursal where sucursal_idsucursal = sucursal.idsucursal;";
         $result   = $mysqli->query($consulta);
          echo "<table border = '3' id=res > \n";
-         echo "<tr align =center> <th colspan=5>Lista de Zapatos global</th> </tr>";
-         echo "<tr align=center id=tit><td >&nbsp;ID_Zapatos&nbsp;</td><td>&nbsp;MARCA&nbsp;</td><td>&nbsp;MODELO&nbsp;</td><td>&nbsp;VALOR&nbsp;</td><td>&nbsp;SUCURSAL&nbsp;</td><td>&nbsp;OPCIONES&nbsp;</td></tr> \n";
+         echo "<tr align =center> <th colspan=7>Lista de Zapatos global</th> </tr>";
+         echo "<tr align=center id=tit><td >&nbsp;ID_Zapatos&nbsp;</td><td>&nbsp;MARCA&nbsp;</td><td>&nbsp;MODELO&nbsp;</td><td>&nbsp;CANTIDAD&nbsp;</td><td>&nbsp;VALOR&nbsp;</td><td>&nbsp;SUCURSAL&nbsp;</td><td>&nbsp;OPCIONES&nbsp;</td></tr> \n";
          while ($campo=mysqli_fetch_object($result)) 
                 {
              echo "<tr id=resul><td>$campo->idzapatos</td><td>$campo->marca</td><td>$campo->modelo</td><td>$campo->cantidad</td><td>$campo->valor</td><td>$campo->sucursal</td> </tr> \n";

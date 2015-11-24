@@ -8,7 +8,7 @@ class conexion
     
     public function conctar()
     {
-        $mysqli = new mysqli("localhost", "zapateria", "root", "mysql");
+        $mysqli = new mysqli("localhost", "root", "mysql", "zapateria");
 /* comprobar la conexión */
         if (mysqli_connect_errno()) 
             {

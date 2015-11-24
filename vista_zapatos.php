@@ -10,7 +10,14 @@ and open the template in the editor.
         <link type="text/css" rel="stylesheet" href="css/css.css">
         <title></title>
     </head>
+     <?php include './header.php'; ?>
     <body>
-       <?php include './header.php'; ?>
+        <div id="section">
+            <br> <!-- espacio -->
+            <br>
+            <?php include './conex.php';
+            include './zapatos.php';
+            Zapatos::lista_zapatos()?>
+        </div>
     </body>
 </html>
