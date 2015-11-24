@@ -15,7 +15,7 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-        <?php include ("bogota/headerB.php"); ?>
+        <?php include ("./headerB.php"); ?>
         
         <div>
             
