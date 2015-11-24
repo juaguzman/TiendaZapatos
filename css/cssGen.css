@@ -1,0 +1,42 @@
+#menu
+{
+    float: left;
+    padding-right: 15px;
+
+}
+#left {
+    float: left;
+    
+    padding: 5px;
+    width: 150px;
+}
+
+
+.center_content
+{
+    position: relative;
+    float: left;    
+    margin: 0 auto;
+    margin-top: 20px;
+   
+    
+  
+    
+    
+}
+
+.left_content {
+   
+   
+    margin-left: 170px;
+}
+
+
+
+
+
+.tabla
+{
+    position: relative;
+    margin-left: 30%;
+}
