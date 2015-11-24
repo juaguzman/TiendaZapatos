@@ -31,7 +31,7 @@ if(isset($_POST['txt_id']))
         $modelo = $_POST['txt_modelo'];
         $cantidad = $_POST['txt_cantidad'];
         $valor = $_POST['txt_valo'];
-        //Colegio::editarColegio($id, $nombre, $estado, $ciudad);
+        Zapatos::editarZapatos($marca, $modelo, $cantidad, $valo, $sucursal_idsucursal);
         header('Location:../index.php');
     }
     else

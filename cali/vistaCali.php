@@ -36,7 +36,7 @@ and open the template in the editor.
                 <div class="tabla">
           <?php include '../conex.php';
             include '../modelo/zapatos.php';
-            Zapatos::lista_zapatos()?>
+            Zapatos::lista_zapatos_sucursal(2) ?>
                     </div>
         </div>
         
