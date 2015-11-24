@@ -25,11 +25,11 @@ class Zapatos
                 
         if (!$sql) 
             {
-            $mensaje.="Error Insertando Colegio en la base de datos: " . mysql_error();
+            $mensaje.="Error Insertando zapatos en la base de datos: " . mysql_error();
             } 
         else 
             {
-            $mensaje.="El Colegio con nombre: " . $pNombre . " fue agregado al sistema";
+            $mensaje.="los zapatos con nombre: " . $marca . " fue agregado al sistema";
             }
         return $mensaje;
     }
