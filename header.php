@@ -10,7 +10,7 @@
                     <ul>
                         <li><a href="index.php"><img src="img/casa.png" width="25" height="25"></a></li>
                         <li><a href="#">Sucursal</a></li>
-                        <li> <a href="#">Zapatos</a></li>
+                        <li> <a href="vista_zapatos.php">Zapatos</a></li>
                         <li> <a href="#">Vendendor</a></li>
                         <li> <a href="#">Venta</a></li>                    
                     </ul>
