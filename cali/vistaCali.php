@@ -16,7 +16,7 @@ and open the template in the editor.
     </head>
     <body>
         <?php include ("./headerC.php"); ?>
-        
+
         <div>
             
              <div id="menu">
@@ -36,6 +36,7 @@ and open the template in the editor.
                 <div class="tabla">
           <?php include '../conex.php';
             include '../modelo/zapatos.php';
+
             Zapatos::lista_zapatos_sucursal(2) ?>
                     </div>
         </div>

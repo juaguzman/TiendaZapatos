@@ -39,7 +39,7 @@ class Vendedor
     
     public function lista_vendedores()
     {
-       include './conexi.php';
+       include '../conexi.php';
         $mysql = new conexion(); 
         $mysqli=$mysql->conctar();
         $consulta= "SELECT cedula,nombres,apellidos,fecha_nacimiento,sucursal_idsucursal as 'id_s', sucursal.nombre as 'sucursal' from vendedor, sucursal where sucursal_idsucursal = sucursal.idsucursal;";

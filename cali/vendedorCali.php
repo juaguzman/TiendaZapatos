@@ -15,7 +15,7 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-        <?php include ("./headerG.php"); ?>
+        <?php include ("../cali/headerC.php"); ?>
         
         <div>
             
@@ -23,8 +23,8 @@ and open the template in the editor.
             <nav>
                 <ul>
                     <li ><a href="index.php"><img src="../img/casa.png" width="25" height="25"></a></li>
-                    <li> <a href="vista_zapatosGN.php">Zapatos</a></li>
-                    <li> <a href="vendedorG.php">Vendendor</a></li>
+                    <li> <a href="vistaCali.php">Zapatos</a></li>
+                    <li> <a href="vendedorCali.php">Vendendor</a></li>
                     <li> <a href="#">Venta</a></li>                    
                 </ul>
 
@@ -33,10 +33,13 @@ and open the template in the editor.
         
         
             <div id="content" class="center_content">
-                <img  src="../img/images (1).jpg" onmouseover="this.src='../img/images.jpg';" onmouseout="this.src='../img/images (1).jpg';" width="1090px" height="990px"/>
+                <div class="tabla">
+          <?php include '../conex.php';
+            include '../modelo/vendedor.php';
+            Vendedor::lista_vendedores()?>
+                    </div>
         </div>
-        
-       
-            </div>
+        </div>
     </body>
 </html>
+

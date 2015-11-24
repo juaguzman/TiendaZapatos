@@ -15,7 +15,7 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-        <?php include ("./headerG.php"); ?>
+        <?php include ("../general/headerG.php"); ?>
         
         <div>
             
@@ -33,10 +33,12 @@ and open the template in the editor.
         
         
             <div id="content" class="center_content">
-                <img  src="../img/images (1).jpg" onmouseover="this.src='../img/images.jpg';" onmouseout="this.src='../img/images (1).jpg';" width="1090px" height="990px"/>
+                <div class="tabla">
+          <?php include '../conex.php';
+            include '../modelo/vendedor.php';
+            Vendedor::lista_vendedores()?>
+                    </div>
         </div>
-        
-       
-            </div>
+        </div>
     </body>
 </html>

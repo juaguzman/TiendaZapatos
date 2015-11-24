@@ -23,8 +23,8 @@ and open the template in the editor.
             <nav>
                 <ul>
                     <li ><a href="../index.php"><img src="../img/casa.png" width="25" height="25"></a></li>
-                    <li> <a href="../cali/vistaCali.php">Zapatos</a></li>
-                    <li> <a href="#">Vendendor</a></li>
+                    <li> <a href="vistaCali.php">Zapatos</a></li>
+                    <li> <a href="vendedorCali.php">Vendendor</a></li>
                     <li> <a href="#">Venta</a></li>                    
                 </ul>
 
