@@ -35,7 +35,7 @@ and open the template in the editor.
             <div id="content" class="center_content">
                 <div class="tabla">
           <?php include './conex.php';
-            include './zapatos.php';
+            include './modelo/zapatos.php';
             Zapatos::lista_zapatos()?>
                     </div>
         </div>
