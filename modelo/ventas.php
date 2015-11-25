@@ -25,7 +25,7 @@ class Ventas
         $mysqli=$mysql->conctar();
         $mensaje = "Resultado";
         
-        $sql = "INSERT INTO venta(fecha,valor_total,nomcomprador,cedulacomprador,vendedor_cedula,zapatos_idzapatos) values ('$fecha',$valor_total,'$nomcomprador',$cedulacomprador,$vendedor_cedula,$zapatos_idzapatos";
+        $sql = "INSERT INTO venta(fecha,valor_total,nomcomprador,cedulacomprador,vendedor_cedula,zapatos_idzapatos) values ('$fecha',$valor_total,'$nomcomprador',$cedulacomprador,$vendedor_cedula,$zapatos_idzapatos)";
          mysqli_query($mysqli, $sql) or die(mysqli_errno($mysqli));
          mysqli_close($mysqli);
          

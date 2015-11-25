@@ -101,5 +101,21 @@ class Vendedor
         }
     }
     
+    public function opcion_vendedores_sucursal($sucursal)
+    {
+       
+        $mysql = new conexion(); 
+        $mysqli=$mysql->conctar();
+        $consulta= "select * from vendedor where vendedor.sucursal_idsucursal =$sucursal";
+        $result   = $mysqli->query($consulta);
+        echo "<select name=txt_cedVend > \n";
+           while ($campo=mysqli_fetch_object($result)) 
+                {
+             echo "<option value=$campo->cedula > $campo->nombres </option>";
+                }
+                 echo "</select> \n";
+                 $mysqli->close();
+    }
+    
     
 }

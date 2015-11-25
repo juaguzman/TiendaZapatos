@@ -177,6 +177,7 @@ body
 .datagrid table 
 { 
     border-collapse: collapse; text-align: left; width: 100%; 
+    text-align: center;
 } 
 .datagrid 
 {
@@ -187,10 +188,12 @@ body
     -webkit-border-radius: 14px; 
     -moz-border-radius: 14px; 
     border-radius: 14px; 
+    text-align: center;
 }
 .datagrid #pri tr
 {
     background-color:#006699;
+    text-align: center;
 }
 .datagrid table td, .datagrid table th 
 { 
@@ -230,6 +233,7 @@ body
 .datagrid table tfoot td div 
 { 
     border-top: 1px solid #006699;background: #E1EEf4;
+    padding: 60px;
 } 
 .datagrid table tfoot td 
 { 
