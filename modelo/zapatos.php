@@ -134,7 +134,7 @@ class Zapatos
          echo "<tr align=center class=datagrid><td >&nbsp;ID_Zapatos&nbsp;</td><td>&nbsp;MARCA&nbsp;</td><td>&nbsp;MODELO&nbsp;</td><td>&nbsp;CANTIDAD&nbsp;</td><td>&nbsp;VALOR&nbsp;</td><td>&nbsp;OPCIONES&nbsp;</td></tr> \n";
          while ($campo=mysqli_fetch_object($result)) 
                 {
-             echo "<tr class=datagrid><td>$campo->idzapatos</td><td>$campo->marca</td><td>$campo->modelo</td><td>$campo->cantidad</td><td>$campo->valor</td><td><a href=../modelo/Vender.php?req_venta=vender&id=$campo->idzapatos><img src=../img/car.png width=25px heigt=25px /></a></tr> \n";
+             echo "<tr class=datagrid><td>$campo->idzapatos</td><td>$campo->marca</td><td>$campo->modelo</td><td>$campo->cantidad</td><td>$campo->valor</td><td><a href=../modelo/Vender.php?req_venta=vender&id=$campo->idzapatos&sucu=$sucursal><img src=../img/car.png width=25px heigt=25px /></a></tr> \n";
                 }
                  echo "</table> \n";
                  $mysqli->close();
