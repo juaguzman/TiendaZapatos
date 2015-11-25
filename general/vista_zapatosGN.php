@@ -33,13 +33,15 @@ and open the template in the editor.
         
         
             <div id="content" class="center_content">
-                <div class="tabla">
+                <div class="datagrid">
           <?php include '../conex.php';
             include '../modelo/zapatos.php';
             Zapatos::lista_zapatos()?>
                     </div>
+                <br>
+                <br>
                  <div id="acciones">
-                     <a href="../general/agregarZapG.php">agregar</a>
+                     <a href="../general/agregarZapG.php">Agregar Zapatos</a>
                 </div>
         </div>
         

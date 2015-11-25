@@ -26,9 +26,10 @@
         
         
             <div id="content" class="center_content">
-                <div class="tabla">
+                <div class="datagrid">
                     <form action="../modelo/procesar_vendedor.php" method="post">
-            <table border="1">
+                        
+                        <table border="1">
                 <thead>
                     <tr align ="center">
                         <th colspan="2">Agregar Vendedor</th> <!-- titulos de el formulario -->
@@ -60,16 +61,16 @@
             <table>
                 <tr>
                     <td>
-            <input type="submit" value="Enviar" class="boton"/>
-            <input type="hidden" value="Enviar" name="req_vende" >
-            </td>
-            </tr>
+                        <input type="submit" value="Enviar" class="boton"/>
+                        <input type="hidden" value="Enviar" name="req_vende" >
+                    </td>
+                </tr>
             </table>
 
           
-                    </div>
+            </div>   
         </div>
-        
+           
        
             </div>
     </body>
