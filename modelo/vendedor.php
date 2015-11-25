@@ -21,7 +21,7 @@ class Vendedor
     
       static function insertarvendedor($cedula,$nombres,$apellidos,$fecha_nacimiento,$sucursal_idsucursal)
     {
-        include './conex.php';
+        include '../conex.php';
         $mensaje = "Resultados";
         
         $sql = @mysql_query("INSERT INTO vendedor(cedula,nombres,apellidos,fecha_nacimiento,sucursal_idsucursal) values ($cedula, '$nombres', '$apellidos', '$fecha_nacimiento', $sucursal_idsucursal)");

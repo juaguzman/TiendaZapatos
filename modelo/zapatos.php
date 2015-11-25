@@ -8,20 +8,21 @@ class Zapatos
     var $valor;
     var $sucursal_idsucursal;
     
-    function Zapatos($marca, $modelo, $cantidad, $valo, $sucursal_idsucursal)
+    function Zapatos($marca, $modelo, $cantidad, $valor, $sucursal_idsucursal)
     {
         $this-> marca = $marca;
         $this-> modelo = $modelo;
         $this-> cantidad = $cantidad;
+        $this-> valor = $valor;
         $this-> sucursal_idsucursal = $sucursal_idsucursal;        
     }
     
-    static function insertarZapatos($marca, $modelo, $cantidad, $valo, $sucursal_idsucursal)
+    static function insertarZapatos($marca, $modelo, $cantidad, $valor, $sucursal_idsucursal)
     {
-        include './conex.php';
+        include '../conex.php';
         $mensaje = "Resultados";
         
-        $sql = @mysql_query("insert into zapatos(marca,modelo,cantidad,valor,sucursal_idsucursal) values ('$marca','$modelo',$cantidad,$valor,$sucursal_idsucursal);");
+        $sql = @mysql_query("insert into zapatos(marca,modelo,cantidad,valor,sucursal_idsucursal) values ('$marca','$modelo',$cantidad,$valor,$sucursal_idsucursal)");
                 
         if (!$sql) 
             {
@@ -92,6 +93,8 @@ class Zapatos
     
     static function editarZapatos($id,$marca, $modelo, $cantidad, $valo)
     {
+        include_once '../conex.php';
+        
         if($id!=NULL || $marca!=NULL || $modelo!=NULL || $cantidad!=NULL || $valo!=NULL  )
         {
             $sql = "UPDATE zapatos SET marca='$marca',modelo='$modelo',cantidad=$cantidad ,valor=$valo WHERE idzapatos = $id;";

@@ -5,7 +5,7 @@ switch ($_REQUEST['req_zap'])
     case 'Enviar':
         $marca = $_POST['txt_marca'];
         $modelo = $_POST['txt_modelo'];
-        $cantidad = $_POST['txt_cant'];
+        $cantidad = $_POST['txt_cantidad'];
         $valor = $_POST['txt_valor'];
         $sucursal_idsucursal = $_POST['txt_idsucu'];
         
