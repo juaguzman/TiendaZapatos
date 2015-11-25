@@ -36,7 +36,7 @@
         
         
             <div id="content" class="center_content">
-                <div class="tabla">
+                <div class="datagrid">
                     <form action="../modelo/procesar_vendedor.php" method="post">
             <table border="1">
                 <thead>

@@ -54,7 +54,7 @@ class Zapatos
          echo "<tr align=center id=tit><td >&nbsp;ID_Zapatos&nbsp;</td><td>&nbsp;MARCA&nbsp;</td><td>&nbsp;MODELO&nbsp;</td><td>&nbsp;CANTIDAD&nbsp;</td><td>&nbsp;VALOR&nbsp;</td><td>&nbsp;SUCURSAL&nbsp;</td><td>&nbsp;OPCIONES&nbsp;</td></tr> \n";
          while ($campo=mysqli_fetch_object($result)) 
                 {
-             echo "<tr id=resul><td>$campo->idzapatos</td><td>$campo->marca</td><td>$campo->modelo</td><td>$campo->cantidad</td><td>$campo->valor</td><td>$campo->sucursal</td><td><a href=../modelo/procesar_zapatos.php?req_zap=Eliminar&id=$campo->idzapatos >Elminar</a> "
+             echo "<tr id=resul><td>$campo->idzapatos</td><td>$campo->marca</td><td>$campo->modelo</td><td>$campo->cantidad</td><td>$campo->valor</td><td>$campo->sucursal</td><td><a href=../modelo/procesar_zapatos.php?req_zap=Eliminar&id=$campo->idzapatos ><img src=../img/eli.png width=25px heigt=25px /></a> "
                      . "&nbsp;&nbsp;&nbsp; <a href=../modelo/modificarZap.php?req_zap=Modificar&id=$campo->idzapatos><img src=../img/mod.png width=25px heigt=25px /></a></td> </tr> \n";
                 }
                  echo "</table> \n";
@@ -75,7 +75,7 @@ class Zapatos
          echo "<tr align=center class=datagrid><td >&nbsp;ID_Zapatos&nbsp;</td><td>&nbsp;MARCA&nbsp;</td><td>&nbsp;MODELO&nbsp;</td><td>&nbsp;CANTIDAD&nbsp;</td><td>&nbsp;VALOR&nbsp;</td><td>&nbsp;OPCIONES&nbsp;</td></tr> \n";
          while ($campo=mysqli_fetch_object($result)) 
                 {
-             echo "<tr class=datagrid><td>$campo->idzapatos</td><td>$campo->marca</td><td>$campo->modelo</td><td>$campo->cantidad</td><td>$campo->valor</td><td><a href=../modelo/procesar_zapatos.php?req_zap=Eliminar&id=".$campo->idzapatos.";>Elminar</a> "
+             echo "<tr class=datagrid><td>$campo->idzapatos</td><td>$campo->marca</td><td>$campo->modelo</td><td>$campo->cantidad</td><td>$campo->valor</td><td><a href=../modelo/procesar_zapatos.php?req_zap=Eliminar&id=".$campo->idzapatos.";><img src=../img/eli.png width=25px heigt=25px /></a> "
                      . "&nbsp;&nbsp;&nbsp; <a href=../modelo/modificarZap.php?req_zap=Modificar&id=$campo->idzapatos><img src=../img/mod.png width=25px heigt=25px /></a></tr> \n";
                 }
                  echo "</table> \n";
@@ -134,7 +134,7 @@ class Zapatos
          echo "<tr align=center class=datagrid><td >&nbsp;ID_Zapatos&nbsp;</td><td>&nbsp;MARCA&nbsp;</td><td>&nbsp;MODELO&nbsp;</td><td>&nbsp;CANTIDAD&nbsp;</td><td>&nbsp;VALOR&nbsp;</td><td>&nbsp;OPCIONES&nbsp;</td></tr> \n";
          while ($campo=mysqli_fetch_object($result)) 
                 {
-             echo "<tr class=datagrid><td>$campo->idzapatos</td><td>$campo->marca</td><td>$campo->modelo</td><td>$campo->cantidad</td><td>$campo->valor</td><td><a href=../modelo/Vender.php?req_venta=vender&id=$campo->idzapatos&sucu=$sucursal>Vender</a></tr> \n";
+             echo "<tr class=datagrid><td>$campo->idzapatos</td><td>$campo->marca</td><td>$campo->modelo</td><td>$campo->cantidad</td><td>$campo->valor</td><td><a href=../modelo/Vender.php?req_venta=vender&id=$campo->idzapatos><img src=../img/car.png width=25px heigt=25px /></a></tr> \n";
                 }
                  echo "</table> \n";
                  $mysqli->close();
