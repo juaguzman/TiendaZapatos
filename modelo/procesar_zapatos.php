@@ -26,8 +26,8 @@ if(isset($_POST['txt_id']))
     
     if($id>0)
     {
-        
-         $marca = $_POST['txt_marca'];
+        $id = $_POST['txt_id'];
+        $marca = $_POST['txt_marca'];
         $modelo = $_POST['txt_modelo'];
         $cantidad = $_POST['txt_cantidad'];
         $valor = $_POST['txt_valor'];
