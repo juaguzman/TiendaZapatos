@@ -54,7 +54,8 @@ class Zapatos
          echo "<tr align=center id=tit><td >&nbsp;ID_Zapatos&nbsp;</td><td>&nbsp;MARCA&nbsp;</td><td>&nbsp;MODELO&nbsp;</td><td>&nbsp;CANTIDAD&nbsp;</td><td>&nbsp;VALOR&nbsp;</td><td>&nbsp;SUCURSAL&nbsp;</td><td>&nbsp;OPCIONES&nbsp;</td></tr> \n";
          while ($campo=mysqli_fetch_object($result)) 
                 {
-             echo "<tr id=resul><td>$campo->idzapatos</td><td>$campo->marca</td><td>$campo->modelo</td><td>$campo->cantidad</td><td>$campo->valor</td><td>$campo->sucursal</td><td><a href=../modelo/procesar_zapatos.php?req_zap=Eliminar&id=$campo->idzapatos >Elminar</a><a href=../modelo/modificarZap.php?req_zap=Modificar&id=$campo->idzapatos>Modificar</a></td> </tr> \n";
+             echo "<tr id=resul><td>$campo->idzapatos</td><td>$campo->marca</td><td>$campo->modelo</td><td>$campo->cantidad</td><td>$campo->valor</td><td>$campo->sucursal</td><td><a href=../modelo/procesar_zapatos.php?req_zap=Eliminar&id=$campo->idzapatos >Elminar</a> "
+                     . "&nbsp;&nbsp;&nbsp; <a href=../modelo/modificarZap.php?req_zap=Modificar&id=$campo->idzapatos>Modificar</a></td> </tr> \n";
                 }
                  echo "</table> \n";
                  $mysqli->close();
@@ -70,11 +71,12 @@ class Zapatos
         $consulta= "select * from zapatos where zapatos.sucursal_idsucursal = $sucursal";
         $result   = $mysqli->query($consulta);
          echo "<table border = '3' class=datagrid > \n";
-         echo "<tr align =center class=datagrid> <th colspan=5>Lista de Zapatos global</th> </tr>";
+         echo "<tr align =center class=datagrid> <th colspan=6>Lista de Zapatos global</th> </tr>";
          echo "<tr align=center class=datagrid><td >&nbsp;ID_Zapatos&nbsp;</td><td>&nbsp;MARCA&nbsp;</td><td>&nbsp;MODELO&nbsp;</td><td>&nbsp;CANTIDAD&nbsp;</td><td>&nbsp;VALOR&nbsp;</td><td>&nbsp;OPCIONES&nbsp;</td></tr> \n";
          while ($campo=mysqli_fetch_object($result)) 
                 {
-             echo "<tr class=datagrid><td>$campo->idzapatos</td><td>$campo->marca</td><td>$campo->modelo</td><td>$campo->cantidad</td><td>$campo->valor</td><td><a href=../modelo/procesar_zapatos.php?req_zap=Eliminar&id=".$campo->idzapatos.";>Elminar</a><a>Modificar</a></tr> \n";
+             echo "<tr class=datagrid><td>$campo->idzapatos</td><td>$campo->marca</td><td>$campo->modelo</td><td>$campo->cantidad</td><td>$campo->valor</td><td><a href=../modelo/procesar_zapatos.php?req_zap=Eliminar&id=".$campo->idzapatos.";>Elminar</a> "
+                     . "&nbsp;&nbsp;&nbsp; <a href=../modelo/modificarZap.php?req_zap=Modificar&id=$campo->idzapatos>Modificar</a></tr> \n";
                 }
                  echo "</table> \n";
                  $mysqli->close();

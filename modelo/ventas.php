@@ -96,4 +96,6 @@ static function eliminar_factura($id)
 
 
 
+
+
 }

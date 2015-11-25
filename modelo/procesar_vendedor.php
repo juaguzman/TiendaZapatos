@@ -27,7 +27,7 @@ if(isset($_POST['txt_id']))
     if($id>0)
     {
         
-        $cedula =$_POST['txt_cedula'];
+        $cedula =$_POST['txt_id'];
         $nombre = $_POST['txt_nombre'];
         $apellido = $_POST['txt_apellido'];
         $fecha = $_POST['txt_fecha'];
