@@ -127,7 +127,7 @@ class Zapatos
          include '../conexi.php';
         $mysql = new conexion();
         $mysqli=$mysql->conctar();
-        $consulta= "select * from zapatos where zapatos.sucursal_idsucursal = $sucursal";
+        $consulta= "select * from zapatos where zapatos.sucursal_idsucursal = $sucursal ORDER BY idzapatos asc";
         $result   = $mysqli->query($consulta);
          echo "<table border = '3' class=datagrid > \n";
          echo "<tr align =center class=datagrid> <th colspan=6>Lista de Zapatos global</th> </tr>";
@@ -149,7 +149,7 @@ class Zapatos
         $mysql = new conexion();
         $mysqli=$mysql->conctar();
         
-       $sql = "UPDATE zapatos SET cantidad = cantidad-$cant WHERE idzapatos =$id";
+       $sql = "UPDATE zapatos SET cantidad = cantidad-$cant WHERE idzapatos =$id ORDER BY idzapatos asc";
        mysqli_query($mysqli, $sql) or die(mysqli_errno($mysqli));
        mysqli_close($mysqli);
       

@@ -27,11 +27,11 @@ if(isset($_POST['txt_id']))
     if($id>0)
     {
         
-        $cedula =$_POST['txt_id'];
-        $nombre = $_POST['txt_nombre'];
-        $apellido = $_POST['txt_apellido'];
-        $fecha = $_POST['txt_fecha'];
-        Vendedor::editarVendedor($cedula, $nombre, $apellido, $fecha);
+        $id =$_POST['txt_id'];
+        $nombres = $_POST['txt_nombre'];
+        $apellidos = $_POST['txt_apellido'];
+        $fecha_nacimiento = $_POST['txt_fecha'];
+        Vendedor::editarVendedor($id ,$nombres,$apellidos,$fecha_nacimiento);
         header('Location:../general/vendedorG.php');
     }
     else

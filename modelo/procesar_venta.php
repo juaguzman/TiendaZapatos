@@ -13,13 +13,13 @@ switch ($_REQUEST['req_venta'])
         
         $mensaje= Ventas::insertarVenta($fecha, $valorT, $nombreC, $cedula, $vendedorCe, $zapatos_idzapatos);
         
-        header('Location:../general/ventasG.php');
+        echo "<script>alert('venta Agregada');location.href='../general/ventasG.php'</script>";
         break;
     
     case 'Eliminar':
         $id = $_REQUEST['id'];
         $mensaje = Ventas::eliminar_factura($id);
-        header('Location:../general/ventasG.php');
+        echo "<script>alert('venta Eliminada');location.href='../general/ventasG.php'</script>";
         break;
     
         case 'Vender':

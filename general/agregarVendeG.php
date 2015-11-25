@@ -52,7 +52,13 @@
                         <td>Fecha nacimiento:</td>
                         <td><input type="date" name="txt_fecha" value="" required=""/></td>
                     </tr>
-                     <input hidden="" type="hidden" name="txt_idsucu" value="3" />
+                    <td>Sucursal:</td>
+                        <td><select name="txt_idsucu"> 
+                             <option value="1">Pasto </option>
+                             <option value="2">Cali</option>
+                             <option value="3">Bogota</option>
+                         </select>
+                            </td>
                     
                     
                 </tbody>
