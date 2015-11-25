@@ -267,3 +267,13 @@ body
     { 
         position: fixed !important; 
     }
+ /*----------- imagenes inicio----------------*/
+ #img1
+ {
+     padding: 10px;
+ }
+ #img2
+ {
+     margin-left: 700px;
+     margin-top: -400px;
+ }

@@ -37,14 +37,10 @@ and open the template in the editor.
                 <div class="datagrid">
           <?php include '../conex.php';
             include '../modelo/zapatos.php';
-            Zapatos::lista_zapatos_sucursal(1)?>
+
+            Zapatos::lista_zapatos_ventas(1) ?>
                     </div>
-                <br>
-                <br>
-                <div id="acciones">
-                    <a href="../pasto/agregarZaP.php">Agregar zapatos</a>
-                </div>
-                    
+               
         </div>
         
        

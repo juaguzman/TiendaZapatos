@@ -22,11 +22,11 @@ and open the template in the editor.
              <div id="menu">
             <nav>
                 <ul>
-                    <li ><a href="index.php"><img src="../img/casa.png" width="25" height="25"></a></li>
+                    <li ><a href="../index.php"><img src="../img/casa.png" width="25" height="25"></a></li>
                     <li> <a href="vistaCali.php">Zapatos</a></li>
-                    <li> <a href="vendedorCali.php">Vendendor</a></li>
-                    <li> <a href="ventasC.php">Venta</a></li>  
-                       <li> <a href="venderCali.php">Vender</a></li>
+                    <li> <a href="vendedorCali.php">Vendedor</a></li>
+                    <li> <a href="ventasC.php">Venta</a></li>
+                    <li> <a href="venderCali.php">Vender</a></li>
                 </ul>
 
             </nav>
@@ -36,9 +36,9 @@ and open the template in the editor.
             <div id="content" class="center_content">
                 <div class="datagrid">
           <?php include '../conex.php';
-            include '../modelo/zapatos.php';
+            include '../modelo/ventas.php';
 
-            Zapatos::lista_zapatos_sucursal(2) ?>
+            Ventas::listar_ventas_sucursal(2) ?>
                     </div>
         </div>
         

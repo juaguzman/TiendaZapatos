@@ -24,9 +24,9 @@ and open the template in the editor.
                 <ul>
                     <li ><a href="../index.php"><img src="../img/casa.png" width="25" height="25"></a></li>
                     <li> <a href="vistaCali.php">Zapatos</a></li>
-                    <li> <a href="vendedorCali.php">Vendendor</a></li>
-                    <li> <a href="ventasC.php">Venta</a></li>    
-                     <li> <a href="venderCali.php">Vender</a></li>  
+                    <li> <a href="vendedorCali.php">Vendedor</a></li>
+                    <li> <a href="ventasC.php">Venta</a></li>
+                    <li> <a href="venderCali.php">Vender</a></li>  
                 </ul>
 
             </nav>

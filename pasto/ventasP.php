@@ -22,10 +22,11 @@ and open the template in the editor.
              <div id="menu">
             <nav>
                 <ul>
-                    <li ><a href="index.php"><img src="../img/casa.png" width="25" height="25"></a></li>
+                    <li ><a href="../index.php"><img src="../img/casa.png" width="25" height="25"></a></li>
                     <li> <a href="vistaPasto.php">Zapatos</a></li>
-                    <li> <a href="vendedorP.php">Vendendor</a></li>
-                    <li> <a href="ventasP.php">Venta</a></li>                    
+                    <li> <a href="vendedorP.php">Vendedor</a></li>
+                    <li> <a href="ventasP.php">Venta</a></li> 
+                    <li> <a href="venderPasto.php">Vender</a></li>
                 </ul>
 
             </nav>
@@ -35,8 +36,8 @@ and open the template in the editor.
             <div id="content" class="center_content">
                 <div class="datagrid">
           <?php include '../conex.php';
-            include '../modelo/vendedor.php';
-            Vendedor::lista_vendedores_sucursal(1)?>
+            include '../modelo/ventas.php';
+            Ventas::listar_ventas_sucursal(1)?>
                     </div>
         </div>
         </div>
