@@ -1,5 +1,5 @@
 <?php
-include './zapatos.php';
+include '../modelo/zapatos.php';
 switch ($_REQUEST['req_zap'])
 {
     case 'Enviar':
