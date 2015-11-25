@@ -40,11 +40,7 @@ and open the template in the editor.
 
             Zapatos::lista_zapatos_ventas(2) ?>
                     </div>
-                <br>
-                <br>
-                 <div id="acciones">
-                     <a href="../cali/agregarZapC.php">Agregar Zapatos</a>
-                </div>
+               
         </div>
         
        

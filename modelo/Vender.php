@@ -58,7 +58,7 @@ and open the template in the editor.
                             </tr>
                         </tbody>
                         <tfoot>
-                            
+                            <tr><td>Vendedor:</td> <td><input type="text" name="txt_nomVend" required=""/></td></tr>
                         </tfoot>
                        
                     </table>
