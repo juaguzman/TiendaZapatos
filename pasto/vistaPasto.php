@@ -39,7 +39,7 @@ and open the template in the editor.
             Zapatos::lista_zapatos_sucursal(1)?>
                     </div>
                 <div id="acciones">
-                    <a href="../pasto/agregarZaP.php">agregar</a>
+                    <a href="../pasto/agregarZaP.php">Agregar zapatos</a>
                 </div>
                     
         </div>
