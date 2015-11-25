@@ -27,30 +27,29 @@
         
             <div id="content" class="center_content">
                 <div class="datagrid">
-                    <form action="../modelo/procesar_vendedor.php" method="post">
-                        
-                        <table border="1">
+                    <form action="../modelo/procesar_zapatos.php" method="post">
+            <table border="1">
                 <thead>
                     <tr align ="center">
-                        <th colspan="2">Agregar Vendedor</th> <!-- titulos de el formulario -->
+                        <th colspan="2">Agregar Zapato</th> <!-- titulos de el formulario -->
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Cedula:</td>
-                        <td><input type="number" name="txt_cedula" value="" required=""/></td>
+                        <td>Marca:</td>
+                        <td><input type="text" name="txt_marca" value="" required=""/></td>
                     </tr>
                     <tr>
-                        <td>Nombre:</td>
-                        <td><input type="text" name="txt_nombre" value="" required=""/></td>
+                        <td>Modelo:</td>
+                        <td><input type="text" name="txt_modelo" value="" required=""/></td>
                     </tr>
                     <tr>
-                        <td>Apellido:</td>
-                        <td><input type="text" name="txt_apellido" value="" required=""/></td>
+                        <td>Cantidad:</td>
+                        <td><input type="number" name="txt_cantidad" value="" required=""/></td>
                     </tr>
                     <tr>
-                        <td>Fecha:</td>
-                        <td><input type="date" name="txt_fecha" value="" required=""/></td>
+                        <td>Valor:</td>
+                        <td><input type="number" name="txt_valor" value="" required=""/></td>
                     </tr>
                      <input hidden="" type="hidden" name="txt_idsucu" value="1" />
                     
@@ -61,16 +60,16 @@
             <table>
                 <tr>
                     <td>
-                        <input type="submit" value="Enviar" class="boton"/>
-                        <input type="hidden" value="Enviar" name="req_vende" >
-                    </td>
-                </tr>
+            <input type="submit" value="Enviar" class="boton"/>
+            <input type="hidden" value="Enviar" name="req_zap" >
+            </td>
+            </tr>
             </table>
 
           
-            </div>   
+                    </div>
         </div>
-           
+        
        
             </div>
     </body>

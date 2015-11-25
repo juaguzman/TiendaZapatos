@@ -33,7 +33,7 @@ and open the template in the editor.
         
         
             <div id="content" class="center_content">
-                <div class="tabla">
+                <div class="datagrid">
           <?php include '../conex.php';
             include '../modelo/vendedor.php';
             Vendedor::lista_vendedores_sucursal(1)?>
