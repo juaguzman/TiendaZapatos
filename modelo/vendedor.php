@@ -63,7 +63,7 @@ class Vendedor
           echo "<tr align=center id=tit><td >&nbsp;Cedula&nbsp;</td><td>&nbsp;Nombres&nbsp;</td><td>&nbsp;Apellidos&nbsp;</td><td>&nbsp;Fecha Nacimiento&nbsp;</td><td>&nbsp;OPCIONES&nbsp;</td></tr> \n";
            while ($campo=mysqli_fetch_object($result)) 
                 {
-             echo "<tr id=resul><td>$campo->cedula</td><td>$campo->nombres</td><td>$campo->apellidos</td><td>$campo->fecha_nacimiento</td><td><a href=./modelo/procesar_vendedor.php?req_zap=Eliminar&id=".$campo->cedula.";>Elminar</a><a>Modificar</a></td></tr> \n";
+             echo "<tr id=resul><td>$campo->cedula</td><td>$campo->nombres</td><td>$campo->apellidos</td><td>$campo->fecha_nacimiento</td><td><a href=./modelo/procesar_vendedor.php?req_zap=Eliminar&id=".$campo->cedula.";>Elminar</a>&nbsp;&nbsp;&nbsp;<a href=../modelo/modificarVend.php?req_vende=Modificar&id=$campo->cedula>Modificar</a></td></tr> \n";
                 }
                  echo "</table> \n";
                  $mysqli->close();

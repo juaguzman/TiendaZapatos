@@ -38,7 +38,7 @@
                 <tbody>
                     <tr>
                         <td>Cedula:</td>
-                        <td><input type="number" name="txt_cedula" value="" required=""/></td>
+                        <td><input type="number" name="txt_id" value="" required=""/></td>
                     </tr>
                     <tr>
                         <td>Nombre:</td>

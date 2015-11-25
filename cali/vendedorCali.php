@@ -39,6 +39,11 @@ and open the template in the editor.
             include '../modelo/vendedor.php';
             Vendedor::lista_vendedores_sucursal(2)?>
                     </div>
+                <br>
+                <br>
+                 <div id="acciones">
+                     <a href="../cali/agregarVendeC.php">Agregar Vendedor</a>
+                </div>
         </div>
         </div>
     </body>

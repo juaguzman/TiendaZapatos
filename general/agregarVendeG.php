@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html>
@@ -8,7 +9,7 @@
         <title></title>
     </head>
     <body>
-        <?php include ("../bogota/headerB.php"); ?>
+        <?php include ("../general/headerG.php"); ?>
         
         <div>
             
@@ -16,9 +17,9 @@
             <nav>
                 <ul>
                     <li ><a href="index.php"><img src="../img/casa.png" width="25" height="25"></a></li>
-                    <li> <a href="vistaBogota.php">Zapatos</a></li>
-                    <li> <a href="vendedorB.php">Vendendor</a></li>
-                    <li> <a href="ventasB.php">Venta</a></li>                    
+                    <li> <a href="vista_zapatosGN.php">Zapatos</a></li>
+                    <li> <a href="vendedorG.php">Vendendor</a></li>
+                    <li> <a href="ventasG.php">Venta</a></li>                    
                 </ul>
 
             </nav>
@@ -65,7 +66,7 @@
             </td>
             </tr>
             </table>
-
+                    </form>
           
                     </div>
         </div>
@@ -74,4 +75,5 @@
             </div>
     </body>
 </html>
+
 
