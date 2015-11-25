@@ -121,4 +121,23 @@ class Zapatos
             echo "Los campos deben estar completamente llenos";
         }
     }
+    
+     static function lista_zapatos_ventas($sucursal)
+    {
+         include '../conexi.php';
+        $mysql = new conexion();
+        $mysqli=$mysql->conctar();
+        $consulta= "select * from zapatos where zapatos.sucursal_idsucursal = $sucursal";
+        $result   = $mysqli->query($consulta);
+         echo "<table border = '3' class=datagrid > \n";
+         echo "<tr align =center class=datagrid> <th colspan=6>Lista de Zapatos global</th> </tr>";
+         echo "<tr align=center class=datagrid><td >&nbsp;ID_Zapatos&nbsp;</td><td>&nbsp;MARCA&nbsp;</td><td>&nbsp;MODELO&nbsp;</td><td>&nbsp;CANTIDAD&nbsp;</td><td>&nbsp;VALOR&nbsp;</td><td>&nbsp;OPCIONES&nbsp;</td></tr> \n";
+         while ($campo=mysqli_fetch_object($result)) 
+                {
+             echo "<tr class=datagrid><td>$campo->idzapatos</td><td>$campo->marca</td><td>$campo->modelo</td><td>$campo->cantidad</td><td>$campo->valor</td><td><a href=../modelo/Vender.php?req_venta=vender&id=$campo->idzapatos>Vender</a></tr> \n";
+                }
+                 echo "</table> \n";
+                 $mysqli->close();
+         
+    }
 }

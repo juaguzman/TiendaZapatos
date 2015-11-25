@@ -35,8 +35,8 @@ and open the template in the editor.
             <div id="content" class="center_content">
                 <div class="datagrid">
           <?php include '../conex.php';
-            include '../modelo/vendedor.php';
-            Vendedor::lista_vendedores()?>
+            include '../modelo/ventas.php';
+            Ventas::listar_ventas()?>
                     </div>
         </div>
         </div>

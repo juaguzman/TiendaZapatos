@@ -15,18 +15,18 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-        <?php include ("../cali/headerC.php"); ?>
-        
+        <?php include ("./headerC.php"); ?>
+
         <div>
             
              <div id="menu">
             <nav>
                 <ul>
-                    <li ><a href="index.php"><img src="../img/casa.png" width="25" height="25"></a></li>
+                    <li ><a href="../index.php"><img src="../img/casa.png" width="25" height="25"></a></li>
                     <li> <a href="vistaCali.php">Zapatos</a></li>
                     <li> <a href="vendedorCali.php">Vendendor</a></li>
-                    <li> <a href="ventasC.php">Venta</a></li> 
-                       <li> <a href="venderCali.php">Vender</a></li>
+                    <li> <a href="ventasC.php">Venta</a></li>    
+                     <li> <a href="venderCali.php">Vender</a></li>  
                 </ul>
 
             </nav>
@@ -36,11 +36,19 @@ and open the template in the editor.
             <div id="content" class="center_content">
                 <div class="datagrid">
           <?php include '../conex.php';
-            include '../modelo/vendedor.php';
-            Vendedor::lista_vendedores_sucursal(2)?>
+            include '../modelo/zapatos.php';
+
+            Zapatos::lista_zapatos_ventas(2) ?>
                     </div>
+                <br>
+                <br>
+                 <div id="acciones">
+                     <a href="../cali/agregarZapC.php">Agregar Zapatos</a>
+                </div>
         </div>
-        </div>
+        
+       
+            </div>
     </body>
 </html>
 
