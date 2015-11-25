@@ -30,8 +30,8 @@ if(isset($_POST['txt_id']))
          $marca = $_POST['txt_marca'];
         $modelo = $_POST['txt_modelo'];
         $cantidad = $_POST['txt_cantidad'];
-        $valor = $_POST['txt_valo'];
-        Zapatos::editarZapatos($marca, $modelo, $cantidad, $valo, $sucursal_idsucursal);
+        $valor = $_POST['txt_valor'];
+        Zapatos::editarZapatos($marca, $modelo, $cantidad, $valo);
         header('Location:../index.php');
     }
     else

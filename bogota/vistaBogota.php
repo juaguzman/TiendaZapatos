@@ -38,6 +38,9 @@ and open the template in the editor.
             include '../modelo/zapatos.php';
             Zapatos::lista_zapatos_sucursal(3)?>
                     </div>
+                 <div id="acciones">
+                     <a href="../bogota/agregarZapB.php">agregar</a>
+                </div>
         </div>
         
        

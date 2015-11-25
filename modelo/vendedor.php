@@ -89,7 +89,7 @@ class Vendedor
         return $mensaje;
     }
     
-    static function editarZapatos($id ,$nombres,$apellidos,$fecha_nacimiento,$sucursal_idsucursal)
+    static function editarVendedor($id ,$nombres,$apellidos,$fecha_nacimiento,$sucursal_idsucursal)
     {
       if( $id!=NULL || $nombres!=NULL || $apellidos!=NULL || $fecha_nacimiento!=NULL || $sucursal_idsucursal!=NULL)
       {

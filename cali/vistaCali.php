@@ -39,6 +39,9 @@ and open the template in the editor.
 
             Zapatos::lista_zapatos_sucursal(2) ?>
                     </div>
+                 <div id="acciones">
+                     <a href="../cali/agregarZapC.php">agregar</a>
+                </div>
         </div>
         
        
