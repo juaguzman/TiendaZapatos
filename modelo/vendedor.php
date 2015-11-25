@@ -93,7 +93,7 @@ class Vendedor
     {
       if( $id!=NULL || $nombres!=NULL || $apellidos!=NULL || $fecha_nacimiento!=NULL || $sucursal_idsucursal!=NULL)
       {
-        $sql = "UPDATE vendedor SET nombres='$nombre',apellidos='$apellidos',fecha_nacimiento='$fecha',sucursal_idsucursal=2 WhERE cedula =$id";  
+        $sql = "UPDATE vendedor SET nombres='$nombre',apellidos='$apellidos',fecha_nacimiento='$fecha' WhERE cedula =$id";  
         mysql_query($sql);
        header('Location:../index.php');
       }
