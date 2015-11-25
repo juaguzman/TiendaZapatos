@@ -20,18 +20,16 @@ class Ventas
     
     static function insertarVenta($fecha,$valor_total,$nomcomprador,$cedulacomprador,$vendedor_cedula,$zapatos_idzapatos)
     {
-        include '../conex.php';
+        include '../conexi.php'; 
+        $mysql = new conexion();
+        $mysqli=$mysql->conctar();
         $mensaje = "Resultado";
+        
         $sql = "INSERT INTO venta(fecha,valor_total,nomcomprador,cedulacomprador,vendedor_cedula,zapatos_idzapatos) values ('$fecha',$valor_total,'$nomcomprador',$cedulacomprador,$vendedor_cedula,$zapatos_idzapatos";
-         if (!$sql) 
-            {
-            $mensaje.="Error Insertando venta en la base de datos: " . mysql_error();
-            } 
-        else 
-            {
-            $mensaje.="la venta con fecha: " . $fecha . " fue agregado al sistema";
-            }
-        return $mensaje;
+         mysqli_query($mysqli, $sql) or die(mysqli_errno($mysqli));
+         mysqli_close($mysqli);
+         
+          header('Location:../general/ventasG.php');
     }
     
 
@@ -80,22 +78,16 @@ static function listar_ventas_sucursal($sucursal)
 
 static function eliminar_factura($id)
 {
-    include_once '../conex.php';
+    include '../conexi.php';
+    $mysql = new conexion();
+    $mysqli=$mysql->conctar();
     $mensaje="Resultado";
+    
     $sql = @mysql_query("Delete FROM venta WHERE idfactura = $id");
-     if (!$sql) {
-            $mensaje.="Error Eliminando factura en la base de datos: " . mysql_error();
-        } else {
-            $mensaje.="La factura con identificacion " . $id . " fueron eliminados del sistema";
-            
-        }
-        
-        return $mensaje;
+    mysqli_query($mysqli, $sql) or die(mysqli_errno($mysqli));
+    mysqli_close($mysqli);
+    header('Location:../general/ventasG.php');
+
+
 }
-
-
-
-
-
-
 }

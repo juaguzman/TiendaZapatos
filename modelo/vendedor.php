@@ -30,6 +30,7 @@ class Vendedor
           mysqli_query($mysqli, $sql) or die(mysqli_errno($mysqli));
          mysqli_close($mysqli);      
        
+         header('Location:../general/vendedorG.php');
     }
     
     public function lista_vendedores()
@@ -70,27 +71,29 @@ class Vendedor
     
     static function elminiar_vendedor($id)
     {
-        include '../conex.php';
+        include '../conexi.php';
+        $mysql = new conexion();
+        $mysqli=$mysql->conctar();
         $mensaje = "resultados:";
         
         $sql = @mysql_query("DELETE FROM vendedor WHERE cedula =$id");
-        if (!$sql) {
-            $mensaje.="Error Eliminando al vendedor en la base de datos: " . mysql_error();
-        } else {
-            $mensaje.="el vendedor con identificacion " . $id . " fue eliminados del sistema";
-            
-        }
-        
-        return $mensaje;
+         mysqli_query($mysqli, $sql) or die(mysqli_errno($mysqli));
+         mysqli_close($mysqli);
+         header('Location:../general/vendedorG.php');
     }
     
     static function editarVendedor($id ,$nombres,$apellidos,$fecha_nacimiento,$sucursal_idsucursal)
     {
+        include '../conexi.php';
+        $mysql = new conexion();
+        $mysqli=$mysql->conctar();
+        
       if( $id!=NULL || $nombres!=NULL || $apellidos!=NULL || $fecha_nacimiento!=NULL || $sucursal_idsucursal!=NULL)
       {
         $sql = "UPDATE vendedor SET nombres='$nombre',apellidos='$apellidos',fecha_nacimiento='$fecha' WhERE cedula =$id";  
-        mysql_query($sql);
-       header('Location:../index.php');
+        mysqli_query($mysqli, $sql) or die(mysqli_errno($mysqli));
+        mysqli_close($mysqli);
+        header('Location:../general/vendedorG.php');
       }
        else
         {

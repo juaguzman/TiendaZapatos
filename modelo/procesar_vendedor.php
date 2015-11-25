@@ -3,13 +3,13 @@ include './vendedor.php';
 switch ($_REQUEST['req_vende'])
 {
     case 'Enviar':
-        $cedula =$_POST['txt_cedula'];
+        $cedula =$_POST['txt_id'];
         $nombre = $_POST['txt_nombre'];
         $apellido = $_POST['txt_apellido'];
         $fecha = $_POST['txt_fecha'];
         $sucursal_idsucursal = $_POST['txt_idsucu'];
         
-        $mensaje= Vendedor::insertarvendedor($cedula, $nombre, $fecha, $sucursal_idsucursal);
+        $mensaje= Vendedor::insertarvendedor($cedula, $nombre, $apellido,$fecha, $sucursal_idsucursal);
         header('Location:../general/vendedorG.php');
         break;
     

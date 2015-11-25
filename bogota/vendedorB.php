@@ -38,6 +38,11 @@ and open the template in the editor.
             include '../modelo/vendedor.php';
             Vendedor::lista_vendedores_sucursal(3)?>
                     </div>
+                <br>
+                <br>
+                 <div id="acciones">
+                     <a href="../bogota/agregarVendeB.php">Agregar Vendedor</a>
+                </div>
         </div>
         </div>
     </body>

@@ -1,8 +1,24 @@
 <?php
-
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+include './ventas.php';
+switch ($_REQUEST['req_venta'])
+{
+    case 'Enviar':
+        $fecha =$_POST['txt_fecha'];
+        $valorT = $_POST['txt_valorT'];
+        $nombreC = $_POST['txt_nombreC'];
+        $cedula = $_POST['txt_cedula'];
+        $vendedorCe = $_POST['txt_vendedorCe'];
+        $zapatos_idzapatos = $_POST['txt_idzapa'];
+        
+        $mensaje= Ventas::insertarVenta($fecha, $valorT, $nombreC, $cedula, $vendedorCe, $zapatos_idzapatos);
+        header('Location:../general/ventasG');
+        break;
+    
+    case 'Eliminar':
+        $id = $_REQUEST['id'];
+        $mensaje = Ventas::eliminar_factura($id);
+        header('Location:../general/ventasG.php');
+        break;
+        
+}
 

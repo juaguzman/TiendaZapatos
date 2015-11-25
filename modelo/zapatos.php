@@ -97,7 +97,7 @@ class Zapatos
          mysqli_query($mysqli, $sql) or die(mysqli_errno($mysqli));
          mysqli_close($mysqli);
          
-          header('Location:../general/vista_zapatosGN');
+          header('Location:../general/vista_zapatosGN.php');
         
         return $mensaje;
     }
