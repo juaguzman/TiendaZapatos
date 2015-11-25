@@ -145,14 +145,14 @@ class Zapatos
     {
         
                 
-                include '../conexi.php';
+        
         $mysql = new conexion();
         $mysqli=$mysql->conctar();
         
        $sql = "UPDATE zapatos SET cantidad = cantidad-$cant WHERE idzapatos =$id";
        mysqli_query($mysqli, $sql) or die(mysqli_errno($mysqli));
        mysqli_close($mysqli);
-       header('Location:../general/vista_zapatosGN');
+      
        
     }
 }

@@ -29,7 +29,7 @@ class Ventas
          mysqli_query($mysqli, $sql) or die(mysqli_errno($mysqli));
          mysqli_close($mysqli);
          
-          header('Location:../general/ventasG.php');
+         
     }
     
 
@@ -47,7 +47,7 @@ static function listar_ventas()
       while ($campo=mysqli_fetch_object($result)) 
                 {
              echo "<tr id=resul><td>$campo->idfactura</td><td>$campo->fecha</td><td>$campo->nomcomprador</td><td>$campo->cedulacomprador</td><td>$campo->vendedor</td><td>$campo->vendedor_cedula</td><td>$campo->idzapatos</td>"
-                     . "<td>$campo->marca</td><td>$campo->modelo</td><td>$campo->valorUnid</td><td>$campo->valor_total</td><td>$campo->sucursal</td><td><a href=../modelo/procesar_zapatos.php?req_zap=Eliminar&id=".$campo->idfactura.";><img src=../img/eli.png width=25px heigt=25px /></a>&nbsp;  </tr> \n";
+                     . "<td>$campo->marca</td><td>$campo->modelo</td><td>$campo->valorUnid</td><td>$campo->valor_total</td><td>$campo->sucursal</td><td><a href=../modelo/procesar_venta.php?req_venta=Eliminar&id=".$campo->idfactura.";><img src=../img/eli.png width=25px heigt=25px /></a>&nbsp;  </tr> \n";
                 }
                  echo "</table> \n";
                  $mysqli->close();
@@ -69,7 +69,7 @@ static function listar_ventas_sucursal($sucursal)
       while ($campo=mysqli_fetch_object($result)) 
                 {
              echo "<tr id=resul><td>$campo->idfactura</td><td>$campo->fecha</td><td>$campo->nomcomprador</td><td>$campo->cedulacomprador</td><td>$campo->vendedor</td><td>$campo->vendedor_cedula</td><td>$campo->idzapatos</td>"
-                     . "<td>$campo->marca</td><td>$campo->modelo</td><td>$campo->valorUnid</td><td>$campo->valor_total</td><td><a href=../modelo/procesar_venta.php?req_venta=Eliminar&id=".$campo->idfactura.";>Elminar</a></tr> \n";
+                     . "<td>$campo->marca</td><td>$campo->modelo</td><td>$campo->valorUnid</td><td>$campo->valor_total</td><td><a href=../modelo/procesar_venta.php?req_venta=Eliminar&id=".$campo->idfactura.";><img src=../img/eli.png width=25px heigt=25px /></a></tr> \n";
                 }
                  echo "</table> \n";
                  $mysqli->close();
