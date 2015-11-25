@@ -14,7 +14,12 @@ and open the template in the editor.
         
         <?php include ("./header.php"); ?>
         <div id="Contenido">
-            <img  src="img/images (1).jpg" onmouseover="this.src='img/images.jpg';" onmouseout="this.src='img/images (1).jpg';" width="1090px" height="990px"/>
+            <div id="img1">
+            <img  src="img/images (1).jpg" onmouseover="this.src='img/images.jpg';" onmouseout="this.src='img/images (1).jpg';" width="600px" height="400px"/>
+            </div>
+            <div id="img2">
+            <img  src="img/1pasto.jpg" onmouseover="this.src='img/2pasto.jpg';" onmouseout="this.src='img/1pasto.jpg';" width="600px" height="400px"/>
+            </div>
         </div>
     </body>
 </html>

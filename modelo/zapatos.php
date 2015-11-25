@@ -55,7 +55,7 @@ class Zapatos
          while ($campo=mysqli_fetch_object($result)) 
                 {
              echo "<tr id=resul><td>$campo->idzapatos</td><td>$campo->marca</td><td>$campo->modelo</td><td>$campo->cantidad</td><td>$campo->valor</td><td>$campo->sucursal</td><td><a href=../modelo/procesar_zapatos.php?req_zap=Eliminar&id=$campo->idzapatos >Elminar</a> "
-                     . "&nbsp;&nbsp;&nbsp; <a href=../modelo/modificarZap.php?req_zap=Modificar&id=$campo->idzapatos>Modificar</a></td> </tr> \n";
+                     . "&nbsp;&nbsp;&nbsp; <a href=../modelo/modificarZap.php?req_zap=Modificar&id=$campo->idzapatos><img src=../img/mod.png width=25px heigt=25px /></a></td> </tr> \n";
                 }
                  echo "</table> \n";
                  $mysqli->close();
@@ -76,7 +76,7 @@ class Zapatos
          while ($campo=mysqli_fetch_object($result)) 
                 {
              echo "<tr class=datagrid><td>$campo->idzapatos</td><td>$campo->marca</td><td>$campo->modelo</td><td>$campo->cantidad</td><td>$campo->valor</td><td><a href=../modelo/procesar_zapatos.php?req_zap=Eliminar&id=".$campo->idzapatos.";>Elminar</a> "
-                     . "&nbsp;&nbsp;&nbsp; <a href=../modelo/modificarZap.php?req_zap=Modificar&id=$campo->idzapatos>Modificar</a></tr> \n";
+                     . "&nbsp;&nbsp;&nbsp; <a href=../modelo/modificarZap.php?req_zap=Modificar&id=$campo->idzapatos><img src=../img/mod.png width=25px heigt=25px /></a></tr> \n";
                 }
                  echo "</table> \n";
                  $mysqli->close();

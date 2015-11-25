@@ -15,10 +15,11 @@
              <div id="menu">
             <nav>
                 <ul>
-                    <li ><a href="index.php"><img src="../img/casa.png" width="25" height="25"></a></li>
+                    <li ><a href="../index.php"><img src="../img/casa.png" width="25" height="25"></a></li>
                     <li> <a href="vistaPasto.php">Zapatos</a></li>
-                    <li> <a href="vendedorP.php">Vendendor</a></li>
-                    <li> <a href="ventasP.php">Venta</a></li>                    
+                    <li> <a href="vendedorP.php">Vendedor</a></li>
+                    <li> <a href="ventasP.php">Venta</a></li> 
+                    <li> <a href="venderPasto.php">Vender</a></li>
                 </ul>
 
             </nav>

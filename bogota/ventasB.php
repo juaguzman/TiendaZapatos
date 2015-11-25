@@ -24,8 +24,9 @@ and open the template in the editor.
                 <ul>
                     <li ><a href="../index.php"><img src="../img/casa.png" width="25" height="25"></a></li>
                     <li> <a href="vistaBogota.php">Zapatos</a></li>
-                    <li> <a href="vendedorB.php">Vendendor</a></li>
-                    <li> <a href="ventasB.php">Venta</a></li>                    
+                    <li> <a href="vendedorB.php">Vendedor</a></li>
+                    <li> <a href="ventasB.php">Venta</a></li>
+                    <li> <a href="venderBogota.php">Vender</a></li>   
                 </ul>
 
             </nav>
@@ -35,8 +36,8 @@ and open the template in the editor.
             <div id="content" class="center_content">
                 <div class="datagrid">
           <?php include '../conex.php';
-            include '../modelo/zapatos.php';
-            Zapatos::lista_zapatos_sucursal(3)?>
+            include '../modelo/ventas.php';
+            Ventas::listar_ventas_sucursal(3)?>
                     </div>
         </div>
         

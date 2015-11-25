@@ -15,7 +15,7 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-        <?php include ("../pasto/headerP.php"); ?>
+        <?php include ("../bogota/headerB.php"); ?>
         
         <div>
             
@@ -23,10 +23,10 @@ and open the template in the editor.
             <nav>
                 <ul>
                     <li ><a href="../index.php"><img src="../img/casa.png" width="25" height="25"></a></li>
-                    <li> <a href="vistaPasto.php">Zapatos</a></li>
-                    <li> <a href="vendedorP.php">Vendedor</a></li>
-                    <li> <a href="ventasP.php">Venta</a></li> 
-                    <li> <a href="venderPasto.php">Vender</a></li>
+                    <li> <a href="vistaBogota.php">Zapatos</a></li>
+                    <li> <a href="vendedorB.php">Vendedor</a></li>
+                    <li> <a href="ventasB.php">Venta</a></li>
+                    <li> <a href="venderBogota.php">Vender</a></li>  
                 </ul>
 
             </nav>
@@ -37,18 +37,15 @@ and open the template in the editor.
                 <div class="datagrid">
           <?php include '../conex.php';
             include '../modelo/zapatos.php';
-            Zapatos::lista_zapatos_sucursal(1)?>
+
+            Zapatos::lista_zapatos_ventas(3) ?>
                     </div>
-                <br>
-                <br>
-                <div id="acciones">
-                    <a href="../pasto/agregarZaP.php">Agregar zapatos</a>
-                </div>
-                    
+               
         </div>
         
        
             </div>
     </body>
 </html>
+
 
