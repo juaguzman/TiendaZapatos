@@ -47,7 +47,7 @@ static function listar_ventas()
       while ($campo=mysqli_fetch_object($result)) 
                 {
              echo "<tr id=resul><td>$campo->idfactura</td><td>$campo->fecha</td><td>$campo->nomcomprador</td><td>$campo->cedulacomprador</td><td>$campo->vendedor</td><td>$campo->vendedor_cedula</td><td>$campo->idzapatos</td>"
-                     . "<td>$campo->marca</td><td>$campo->modelo</td><td>$campo->valorUnid</td><td>$campo->valor_total</td><td>$campo->sucursal</td><td><a href=../modelo/procesar_zapatos.php?req_zap=Eliminar&id=".$campo->idfactura.";>Elminar</a>&nbsp;  </tr> \n";
+                     . "<td>$campo->marca</td><td>$campo->modelo</td><td>$campo->valorUnid</td><td>$campo->valor_total</td><td>$campo->sucursal</td><td><a href=../modelo/procesar_venta.php?req_venta=Eliminar&id=".$campo->idfactura.";>Elminar</a>&nbsp;  </tr> \n";
                 }
                  echo "</table> \n";
                  $mysqli->close();
@@ -69,7 +69,7 @@ static function listar_ventas_sucursal($sucursal)
       while ($campo=mysqli_fetch_object($result)) 
                 {
              echo "<tr id=resul><td>$campo->idfactura</td><td>$campo->fecha</td><td>$campo->nomcomprador</td><td>$campo->cedulacomprador</td><td>$campo->vendedor</td><td>$campo->vendedor_cedula</td><td>$campo->idzapatos</td>"
-                     . "<td>$campo->marca</td><td>$campo->modelo</td><td>$campo->valorUnid</td><td>$campo->valor_total</td><td><a href=../modelo/procesar_zapatos.php?req_zap=Eliminar&id=".$campo->idfactura.";>Elminar</a></tr> \n";
+                     . "<td>$campo->marca</td><td>$campo->modelo</td><td>$campo->valorUnid</td><td>$campo->valor_total</td><td><a href=../modelo/procesar_venta.php?req_venta=Eliminar&id=".$campo->idfactura.";>Elminar</a></tr> \n";
                 }
                  echo "</table> \n";
                  $mysqli->close();
@@ -83,7 +83,7 @@ static function eliminar_factura($id)
     $mysqli=$mysql->conctar();
     $mensaje="Resultado";
     
-    $sql = @mysql_query("Delete FROM venta WHERE idfactura = $id");
+    $sql = "Delete FROM venta WHERE idfactura = $id";
     mysqli_query($mysqli, $sql) or die(mysqli_errno($mysqli));
     mysqli_close($mysqli);
     header('Location:../general/ventasG.php');

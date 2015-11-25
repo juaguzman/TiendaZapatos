@@ -1,5 +1,6 @@
 <?php
 include './ventas.php';
+include './zapatos.php';
 switch ($_REQUEST['req_venta'])
 {
     case 'Enviar':
@@ -11,7 +12,8 @@ switch ($_REQUEST['req_venta'])
         $zapatos_idzapatos = $_POST['txt_idzapa'];
         
         $mensaje= Ventas::insertarVenta($fecha, $valorT, $nombreC, $cedula, $vendedorCe, $zapatos_idzapatos);
-        header('Location:../general/ventasG');
+        
+        header('Location:../general/ventasG.php');
         break;
     
     case 'Eliminar':
@@ -36,11 +38,12 @@ switch ($_REQUEST['req_venta'])
             if ($total>10)
             {
               Ventas::insertarVenta($fecha,$valorT,$nomcomprador,$cedulacomprador,$vendedor_cedula,$zapatos_idzapatos); 
-              header('Location:../general/ventasG.php');
+              Zapatos::actualizar_venta($zapatos_idzapatos, $cant);
+             echo "<script>alert('venta realizada');location.href='javascript:history.go(-2);';</script>";
             }
            else if($total<10)
                 {
-                    "<script>alert('No se puede Realizar venta');location.href='history.go(-2);';</script>";
+                    echo "<script>alert('No se puede Realizar venta');location.href='javascript:history.go(-2);';</script>";
                 }
             
             

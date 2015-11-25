@@ -1,6 +1,7 @@
 <?php
         include '../conexi.php';
         $id=$_GET['id'];
+        $suc=$_GET['sucu'];
         $mysql = new conexion();
         $mysqli=$mysql->conctar();
         $consulta= "SELECT * FROM zapatos where idzapatos = $id";
@@ -25,7 +26,7 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-        <?php include ("../header.php"); ?>
+        <?php include ("./header.php"); ?>
 
         <div>
             
@@ -65,7 +66,7 @@ and open the template in the editor.
                         <br/>
                         <tfoot >
                             
-                            <tr><td></td><td></td><td></td><td></td><td>  Vendedor:</td> <td><?php include './vendedor.php'; Vendedor::opcion_vendedores_sucursal(2) ?>  </td></tr>
+                            <tr><td></td><td></td><td></td><td></td><td>  Vendedor:</td> <td><?php include './vendedor.php'; Vendedor::opcion_vendedores_sucursal($suc) ?>  </td></tr>
                         </tfoot>
                        
                     </table>
