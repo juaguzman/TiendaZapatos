@@ -1,3 +1,13 @@
+<?php
+        include '../conexi.php';
+        $id=$_GET['id'];
+        $mysql = new conexion();
+        $mysqli=$mysql->conctar();
+        $consulta= "SELECT * FROM zapatos where idzapatos = $id";
+        $result=$mysqli->query($consulta);
+        $campo=mysqli_fetch_object($result)
+?>
+
 <!DOCTYPE html>
 
 <html>
@@ -36,20 +46,24 @@
                 </thead>
                 <tbody>
                     <tr>
+                        <td>Id Zapatos:</td>
+                        <td><input type="text" name="txt_id" value="<?php echo $campo->idzapatos ;?>" readonly="" required=""/></td>
+                    </tr>
+                    <tr>
                         <td>Marca:</td>
-                        <td><input type="text" name="txt_marca" value="<?php echo $_REQUEST['txt_marca'];?>" required="" required=""/></td>
+                        <td><input type="text" name="txt_marca" value="<?php echo $campo->marca ;?>" required=""/></td>
                     </tr>
                     <tr>
                         <td>Modelo:</td>
-                        <td><input type="text" name="txt_modelo" value="" required=""/></td>
+                        <td><input type="text" name="txt_modelo" value="<?php echo $campo->modelo ;?>" required=""/></td>
                     </tr>
                     <tr>
                         <td>Cantidad:</td>
-                        <td><input type="number" name="txt_cantidad" value="" required=""/></td>
+                        <td><input type="number" name="txt_cantidad" value="<?php echo $campo->cantidad ;?>" required=""/></td>
                     </tr>
                     <tr>
                         <td>Valor:</td>
-                        <td><input type="number" name="txt_valor" value="" required=""/></td>
+                        <td><input type="number" name="txt_valor" value="<?php echo $campo->valor ;?>" required=""/></td>
                     </tr>
                      <input hidden="" type="hidden" name="txt_idsucu" value="1" />
                     
@@ -60,8 +74,8 @@
             <table>
                 <tr>
                     <td>
-            <input type="submit" value="Enviar" class="boton"/>
-            <input type="hidden" value="Enviar" name="req_zap" >
+            <input type="submit" value="Modificar" class="boton"/>
+            <input type="hidden" value="Modificar" name="req_zap" >
             </td>
             </tr>
             </table>

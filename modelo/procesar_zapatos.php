@@ -1,5 +1,6 @@
 <?php
 include '../modelo/zapatos.php';
+
 switch ($_REQUEST['req_zap'])
 {
     case 'Enviar':
@@ -9,14 +10,16 @@ switch ($_REQUEST['req_zap'])
         $valor = $_POST['txt_valor'];
         $sucursal_idsucursal = $_POST['txt_idsucu'];
         
+       
+        
         $mensaje= Zapatos::insertarZapatos($marca, $modelo, $cantidad, $valor, $sucursal_idsucursal);
-        header('Location:../index.php');
+        header('Location:../general/vista_zapatosGN.php');
         break;
     
     case 'Eliminar':
         $id = $_REQUEST['id'];
         $mensaje = Zapatos::eliminar_zapatos($id);
-        header('Location:../index.php');
+        header('Location:../general/vista_zapatosGN.php');
         break;
     
     case "Modificar":
@@ -31,12 +34,13 @@ if(isset($_POST['txt_id']))
         $modelo = $_POST['txt_modelo'];
         $cantidad = $_POST['txt_cantidad'];
         $valor = $_POST['txt_valor'];
-        Zapatos::editarZapatos($marca, $modelo, $cantidad, $valo);
-        header('Location:../index.php');
+        Zapatos::editarZapatos($id,$marca, $modelo, $cantidad, $valor);
+       header('Location:../general/vista_zapatosGN.php');
     }
     else
         echo 'id menor a 0';
 }
-        
+
+break;    
 }
 

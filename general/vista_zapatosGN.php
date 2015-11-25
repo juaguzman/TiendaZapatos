@@ -39,7 +39,8 @@ and open the template in the editor.
             Zapatos::lista_zapatos()?>
                     </div>
                  <div id="acciones">
-                     <a href="../general/agregarZapG.php">agregar</a>
+                     
+                     <a href="../general/agregarZapG.php" > agregar </a>
                 </div>
         </div>
         

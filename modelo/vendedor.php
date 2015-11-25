@@ -21,20 +21,15 @@ class Vendedor
     
       static function insertarvendedor($cedula,$nombres,$apellidos,$fecha_nacimiento,$sucursal_idsucursal)
     {
-        include '../conex.php';
+        include '../conexi.php';
+        $mysql = new conexion();
+        $mysqli=$mysql->conctar();
         $mensaje = "Resultados";
         
-        $sql = @mysql_query("INSERT INTO vendedor(cedula,nombres,apellidos,fecha_nacimiento,sucursal_idsucursal) values ($cedula, '$nombres', '$apellidos', '$fecha_nacimiento', $sucursal_idsucursal)");
-                
-        if (!$sql) 
-            {
-            $mensaje.="Error Insertando vendedor en la base de datos: " . mysql_error();
-            } 
-        else 
-            {
-            $mensaje.="el vendedor con nombre: " . $nombres . " fue agregado al sistema";
-            }
-        return $mensaje;
+        $sql = "INSERT INTO vendedor(cedula,nombres,apellidos,fecha_nacimiento,sucursal_idsucursal) values ($cedula, '$nombres', '$apellidos', '$fecha_nacimiento', $sucursal_idsucursal)";
+          mysqli_query($mysqli, $sql) or die(mysqli_errno($mysqli));
+         mysqli_close($mysqli);      
+       
     }
     
     public function lista_vendedores()

@@ -17,22 +17,29 @@ class Zapatos
         $this-> sucursal_idsucursal = $sucursal_idsucursal;        
     }
     
-    static function insertarZapatos($marca, $modelo, $cantidad, $valor, $sucursal_idsucursal)
+    static function insertarZapatos($marca, $modelo, $cantidad, $valor, $sucursal_idsucursal,$ur)
     {
-        include '../conex.php';
+        include '../conexi.php'; 
+        $mysql = new conexion();
+        $mysqli=$mysql->conctar();
         $mensaje = "Resultados";
         
-        $sql = @mysql_query("insert into zapatos(marca,modelo,cantidad,valor,sucursal_idsucursal) values ('$marca','$modelo',$cantidad,$valor,$sucursal_idsucursal)");
-                
-        if (!$sql) 
-            {
-            $mensaje.="Error Insertando zapatos en la base de datos: " . mysql_error();
-            } 
-        else 
-            {
-            $mensaje.="los zapatos con nombre: " . $marca . " fue agregado al sistema";
-            }
-        return $mensaje;
+        $mod = $modelo;
+        $marc = $marca;
+        $cant = $cantidad;
+        $val = $valor;
+        $sucu = $sucursal_idsucursal;
+        $url = $ur;
+        
+        
+        $sql = "insert into zapatos(marca,modelo,cantidad,valor,sucursal_idsucursal) values ('$marc','$mod',$cant,$val,$sucu)";
+              
+        
+         mysqli_query($mysqli, $sql) or die(mysqli_errno($mysqli));
+         mysqli_close($mysqli);
+         
+          header('Location:../general/vista_zapatosGN');
+       
     }
     
     public function lista_zapatos()
@@ -47,7 +54,7 @@ class Zapatos
          echo "<tr align=center id=tit><td >&nbsp;ID_Zapatos&nbsp;</td><td>&nbsp;MARCA&nbsp;</td><td>&nbsp;MODELO&nbsp;</td><td>&nbsp;CANTIDAD&nbsp;</td><td>&nbsp;VALOR&nbsp;</td><td>&nbsp;SUCURSAL&nbsp;</td><td>&nbsp;OPCIONES&nbsp;</td></tr> \n";
          while ($campo=mysqli_fetch_object($result)) 
                 {
-             echo "<tr id=resul><td>$campo->idzapatos</td><td>$campo->marca</td><td>$campo->modelo</td><td>$campo->cantidad</td><td>$campo->valor</td><td>$campo->sucursal</td><td><a href=../modelo/procesar_zapatos.php?req_zap=Eliminar&id=".$campo->idzapatos.";>Elminar</a><a>Modificar</a> </tr> \n";
+             echo "<tr id=resul><td>$campo->idzapatos</td><td>$campo->marca</td><td>$campo->modelo</td><td>$campo->cantidad</td><td>$campo->valor</td><td>$campo->sucursal</td><td><a href=../modelo/procesar_zapatos.php?req_zap=Eliminar&id=$campo->idzapatos >Elminar</a><a href=../modelo/modificarZap.php?req_zap=Modificar&id=$campo->idzapatos>Modificar</a></td> </tr> \n";
                 }
                  echo "</table> \n";
                  $mysqli->close();
@@ -76,30 +83,36 @@ class Zapatos
     
     static function eliminar_zapatos($id)
     {
-        include '../conex.php';
-        $mensaje = "resultados:";
+        include '../conexi.php';
+        $mysql = new conexion();
+        $mysqli=$mysql->conctar();
+        $mensaje = "Resultados";
+        
         //Insertar usuario en la BD  
        
-        $sql = @mysql_query("DELETE FROM zapatos WHERE idzapatos=$id");
-        if (!$sql) {
-            $mensaje.="Error Eliminando los zapatos en la base de datos: " . mysql_error();
-        } else {
-            $mensaje.="Los zapatos con identificacion " . $id . " fueron eliminados del sistema";
-            
-        }
+        $sql = "DELETE FROM zapatos WHERE idzapatos=$id";
+        
+         mysqli_query($mysqli, $sql) or die(mysqli_errno($mysqli));
+         mysqli_close($mysqli);
+         
+          header('Location:../general/vista_zapatosGN');
         
         return $mensaje;
     }
     
-    static function editarZapatos($id,$marca, $modelo, $cantidad, $valo)
+    static function editarZapatos($id,$marca, $modelo, $cantidad, $valor)
     {
-        include_once '../conex.php';
+        include '../conexi.php';
+        $mysql = new conexion();
+        $mysqli=$mysql->conctar();
         
-        if($id!=NULL || $marca!=NULL || $modelo!=NULL || $cantidad!=NULL || $valo!=NULL  )
+        
+        if($id!=NULL || $marca!=NULL || $modelo!=NULL || $cantidad!=NULL || $valor!=NULL  )
         {
-            $sql = "UPDATE zapatos SET marca='$marca',modelo='$modelo',cantidad=$cantidad ,valor=$valo WHERE idzapatos = $id;";
-            mysql_query($sql);
-            header('Location:../index.php');
+            $sql = "UPDATE zapatos SET marca='$marca',modelo='$modelo',cantidad=$cantidad ,valor=$valor WHERE idzapatos = $id;";
+             mysqli_query($mysqli, $sql) or die(mysqli_errno($mysqli));
+             mysqli_close($mysqli);
+            header('Location:../general/vista_zapatosGN');
         }
         else
         {
