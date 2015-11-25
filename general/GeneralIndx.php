@@ -22,7 +22,7 @@ and open the template in the editor.
              <div id="menu">
             <nav>
                 <ul>
-                    <li ><a href="index.php"><img src="../img/casa.png" width="25" height="25"></a></li>
+                    <li ><a href="../index.php"><img src="../img/casa.png" width="25" height="25"></a></li>
                     <li> <a href="vista_zapatosGN.php">Zapatos</a></li>
                     <li> <a href="vendedorG.php">Vendendor</a></li>
                     <li> <a href="ventasG.php">Venta</a></li>                    
